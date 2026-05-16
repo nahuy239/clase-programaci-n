@@ -27,6 +27,7 @@ g. El alquiler de mayor importe (indicar cliente y monto)
 
 alquileres = "si"
 total_bruto_general = 0
+total_final_general = 0
 total_kilometros = 0
 auto = 0
 camioneta = 0
@@ -53,7 +54,7 @@ while alquileres == "si":
         cant_dias = int(input("ERROR, Cantidad de días de alquiler (entre 1 y 30): "))
 
     precio_por_dia = int(input("Ingresa el precio por dia(mayor a 0): "))
-    while precio_por_dia < 0:
+    while precio_por_dia <= 0:
         precio_por_dia = int(input("ERROR, Ingresa el precio por dia(mayor a 0): "))
 
     recorridos_dia = int(input("Kilómetros recorridos (entre 0 y 5000): "))
@@ -69,10 +70,11 @@ while alquileres == "si":
         cliente_frecuente = (input("ERROR, Cliente frecuente (sí/no): "))
     
 
-    total_alquiler = cant_dias * precio_por_dia
     total_kilometros += recorridos_dia
+    importe_base = cant_dias * precio_por_dia
+    total_bruto_general += importe_base  
 
-
+    total_alquiler = importe_base  
     if cliente_frecuente == "sí":
         total_alquiler *= 0.85
 
@@ -100,7 +102,7 @@ while alquileres == "si":
 
 
 
-    total_bruto_general += total_alquiler
+    total_final_general += total_alquiler
     contador_alquileres += 1
 
 
@@ -110,9 +112,8 @@ while alquileres == "si":
         alquileres = input("ERROR, Quieres seguir registrando alquieres (si/no)?: ")
 
 if total_kilometros > 20000:
-    total_bruto_general *= 1.10
-    
-total_final = total_bruto_general
+    total_final_general *= 1.10
+
 
 if auto > camioneta and auto > moto:
     veh_mayor = "auto"
@@ -130,7 +131,7 @@ else:
 
 promedio_alquiler = total_kilometros / contador_alquileres
 
-print(f"El importe total es {total_bruto_general} y el importe final es {total_final}")
+print(f"El importe total es {total_bruto_general} y el importe final es {total_final_general}")
 print(f"El tipo de vehículo con mayor cantidad de alquileres es: {veh_mayor}")
 print(f"El nombre del cliente que más días alquiló en total es: {nombre_cliente_max}")
 print(f"El promedio de kilómetros recorridos es {promedio_alquiler}")

@@ -42,7 +42,6 @@ cantidad_pacientes = 0
 efectivo = 0
 transferencia = 0
 tarjeta = 0
-#dias_internados = 0
 mas_de_10_dias = 0
 
 while internaciones == "si":
