@@ -77,15 +77,12 @@ while internaciones == "si":
         forma_pago = (input("ERROR, Forma de pago (efectivo, tarjeta, transferencia) "))
     
 
-    #costo por paciente
+
     costo_internacion = cant_dias * costo_por_dia
 
-    #descuento por obra social
     if obra_social == "SI":
         costo_internacion *= 0.8
 
-    
-    #acumuladores
     total_dias += cant_dias
     total_bruto_internaciones += costo_internacion
     
