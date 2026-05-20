@@ -34,7 +34,7 @@ pantalla.
 # ------------EJERCICIO 3-2-------------
 
 # def pedir_numero():
-#     numero = input("Ingresa el numero: ")
+#     numero = int(input("Ingresa el numero: "))
 #     return numero
 
 # num = pedir_numero()
