@@ -1,3 +1,4 @@
+#FUNCIONES RECURSIVAS
 #1-----------------------------------------------------------------------------------------
 
 '''def suma_naturales(numero:int)-> int:
@@ -57,3 +58,4 @@ def calcular_fibonacci(numero:int)->int:
         return 1
     else:
         return calcular_fibonacci(numero - 1) + calcular_fibonacci(numero - 2)
+ 
