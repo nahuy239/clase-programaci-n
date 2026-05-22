@@ -1,0 +1,6 @@
+nombres = ["Ana","Luis","Juan","Mario","Sofia"]
+paises = ["Mexico","Brasil","Italia","Brasil","Mexico"]
+edades = [20,45,50,60,18]
+mails = ["ana@gmail.com","luis@gmail.com","juan@gmail.com","mario@gmail.com","sofia@gmail.com"]
+telefonos = ["111","222","333","444","555"]
+codigos_postales = [9000,7000,8500,9500,10000]
